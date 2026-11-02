@@ -302,8 +302,8 @@ export const profile = {
         description:
           'React + Vite site with LeetCode stats fetched at build time, a daily scheduled GitHub Actions deploy, a Markdown blog and learning log, and generated SEO pages.',
         tags: ['React', 'Vite', 'GitHub Actions'],
-        link: 'https://rupucoding.github.io/portfolio/',
-        github: 'https://github.com/rupucoding/portfolio',
+        link: 'https://rupucoding.github.io/portFolio/',
+        github: 'https://github.com/rupucoding/portFolio',
       },
       {
         title: 'NOC Dashboard',
