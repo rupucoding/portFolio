@@ -90,6 +90,10 @@ function leetcodePlugin() {
 // of requesting a missing file. Restart the dev server after adding the photo.
 const hasPhoto = fs.existsSync(path.resolve('public', profile.photo.src))
 
+// Same for the resume: without the PDF in /public the Resume buttons are hidden,
+// instead of downloading the site's HTML under a .pdf name. Restart after adding it.
+const hasResume = fs.existsSync(path.resolve('public', profile.resume.src))
+
 const base = getBase()
 
 export default defineConfig({
@@ -97,5 +101,6 @@ export default defineConfig({
   plugins: [react(), seoPlugin(), baseRedirectPlugin(base), markdownMetaPlugin(), leetcodePlugin()],
   define: {
     __HAS_PHOTO__: JSON.stringify(hasPhoto),
+    __HAS_RESUME__: JSON.stringify(hasResume),
   },
 })
